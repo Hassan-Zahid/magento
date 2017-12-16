@@ -1,0 +1,4 @@
+var/report/*
+downloader/*
+var/cache/*
+var/session/*

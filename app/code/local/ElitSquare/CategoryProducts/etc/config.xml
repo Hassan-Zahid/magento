@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <ElitSquare_CategoryProducts>
+            <version>0.1.0</version>    <!-- Version number of your module -->
+        </ElitSquare_CategoryProducts>
+    </modules>
+    <frontend>
+        <routers>
+            <categoryproducts>
+                <use>standard</use>
+                <args>
+                    <module>ElitSquare_CategoryProducts</module>
+                    <frontName>categoryproducts</frontName>
+                </args>
+            </categoryproducts>
+        </routers>
+        <layout>
+            <updates>
+                <categoryproducts>
+                    <file>categoryproducts.xml</file> <!-- Our layout file name-->
+                </categoryproducts>
+            </updates>
+         </layout>
+    </frontend>
+    <global>
+        <blocks>
+            <categoryproducts>
+                <class>ElitSquare_CategoryProducts_Block</class>
+            </categoryproducts>
+        </blocks>
+		<resources>
+			<categoryproducts_setup>
+				<setup>
+					<module>ElitSquare_CategoryProducts</module>
+				</setup>
+				<connection>
+					<use>core_setup</use>
+				</connection>
+			</categoryproducts_setup>
+			<categoryproducts_write>
+				<connection>
+					<use>core_write</use>
+				</connection>
+			</categoryproducts_write>
+			<categoryproducts_read>
+				<connection>
+					<use>core_read</use>
+				</connection>
+			</categoryproducts_read>
+		</resources>
+    </global>	
+</config>

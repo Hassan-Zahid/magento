@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    
+ <categoryproducts_index_index> <!-- module here matches node directly beneath <routers> in config.xml -->
+       <update handle="customer_account"/> <!-- include existing customer account layout -->
+       <reference name="my.account.wrapper"> <!-- target parent block -->
+           <block type="categoryproducts/categoryproducts" name="categoryproducts" template="categoryproducts/categoryproducts.phtml"/>
+           <block type="customer/account_dashboard" name="customer.account.link.back" template="customer/account/link/back.phtml" /> <!-- add a back link -->
+       </reference>
+   </categoryproducts_index_index>
+
+
+
+<!--New Section for My Account New Link -->
+    <customer_account>
+        <reference name="customer_account_navigation">
+            <action method="addLink">
+                <name>category_products</name>
+                <path>categoryproducts/index/index</path>
+                <label>Category Products New Tab</label>
+            </action>
+        </reference>
+    </customer_account>
+
+</layout>
